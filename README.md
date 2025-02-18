@@ -7,6 +7,7 @@ Pastikan Anda sudah menginstal **Python 3** dan **pip**. Jika belum, unduh dari 
 
 Lalu, instal dependensi dengan:
 ```sh
+cd BE
 pip install -r requirements.txt
 ```
 
@@ -28,6 +29,7 @@ Jika berjalan dengan sukses, Anda akan melihat output seperti:
 Pastikan Anda sudah menginstal **Node.js** (minimal versi 14). Jika belum, unduh dari [nodejs.org](https://nodejs.org/).
 Lalu, instal Vue CLI jika belum terpasang:
 ```sh
+CD FE
 npm install -g @vue/cli
 ```
 
