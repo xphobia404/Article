@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "e6beffa8-5f9a-450c-b25c-1cbb7cce07f3",
+		"name": "Sharing Vision Indonesia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42398515"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore repudiandae iste error aliquam modi vitae amet adipisci recusandae officiis voluptas.\",\r\n    \"content\": \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eligendi, minus distinctio fugit voluptas incidunt nobis eum blanditiis praesentium id iure facilis. Eligendi perspiciatis pariatur reprehenderit nihil ipsam. Rem, corporis possimus! Reiciendis eos sit labore. Odit, a, incidunt atque provident minus dolorem quidem nemo modi sed illo voluptatum mollitia distinctio asperiores? Inventore provident aut dolore expedita, accusamus repellat saepe officia esse iure numquam exercitationem, doloremque quod, deleniti ullam iste ducimus qui quos doloribus non itaque autem laudantium! Quos praesentium commodi omnis aliquid, hic porro ullam magni consectetur obcaecati esse dolorem tempora consequuntur doloribus eveniet quisquam architecto quis, quibusdam blanditiis! Omnis, tempora ut enim beatae culpa iste labore veritatis possimus qui alias inventore ea neque incidunt laborum aliquid a sapiente quo nemo voluptate error quae provident praesentium. Qui quasi ea illo tempore necessitatibus illum voluptatum ipsa quae id distinctio delectus neque, corporis, unde veritatis animi hic itaque molestias corrupti! Tenetur dolor numquam dolorem voluptate, explicabo veritatis officia quisquam at totam placeat pariatur deleniti cupiditate quo odit voluptas ipsa doloribus ad, eius quis atque. Totam consectetur officiis praesentium eos nemo obcaecati dolorum eveniet dicta neque voluptatibus placeat velit quam quis at quod, ea assumenda ab eius libero. Dolorem debitis suscipit qui quo?\",\r\n    \"category\": \"Technology\",\r\n    \"status\": \"publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/article",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/article?limit=10&offset=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"article"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/article/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"title\": \"Updated Title Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore repudiandae iste error aliquam modi vitae amet adipisci recusandae officiis voluptas.\",\r\n    \"content\": \"Updated content Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, eligendi, minus distinctio fugit voluptas incidunt nobis eum blanditiis praesentium id iure facilis. Eligendi perspiciatis pariatur reprehenderit nihil ipsam. Rem, corporis possimus! Reiciendis eos sit labore. Odit, a, incidunt atque provident minus dolorem quidem nemo modi sed illo voluptatum mollitia distinctio asperiores? Inventore provident aut dolore expedita, accusamus repellat saepe officia esse iure numquam exercitationem, doloremque quod, deleniti ullam iste ducimus qui quos doloribus non itaque autem laudantium! Quos praesentium commodi omnis aliquid, hic porro ullam magni consectetur obcaecati esse dolorem tempora consequuntur doloribus eveniet quisquam architecto quis, quibusdam blanditiis! Omnis, tempora ut enim beatae culpa iste labore veritatis possimus qui alias inventore ea neque incidunt laborum aliquid a sapiente quo nemo voluptate error quae provident praesentium. Qui quasi ea illo tempore necessitatibus illum voluptatum ipsa quae id distinctio delectus neque, corporis, unde veritatis animi hic itaque molestias corrupti! Tenetur dolor numquam dolorem voluptate, explicabo veritatis officia quisquam at totam placeat pariatur deleniti cupiditate quo odit voluptas ipsa doloribus ad, eius quis atque. Totam consectetur officiis praesentium eos nemo obcaecati dolorum eveniet dicta neque voluptatibus placeat velit quam quis at quod, ea assumenda ab eius libero. Dolorem debitis suscipit qui quo?\",\r\n    \"category\": \"Science\",\r\n    \"status\": \"draft\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/article/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/article/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"article",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
