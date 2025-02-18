@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-btn color="primary" class="mb-4 mr-2" @click="$router.push('/article/new')">Add Article</v-btn>
+    <v-btn color="primary" class="mb-4 mr-2" @click="$router.push('/add-article')">Add Article</v-btn>
     <v-btn color="secondary" class="mb-4" @click="$router.push('/article/preview')">preview</v-btn>
 
     <v-tabs v-model="selectedTab">

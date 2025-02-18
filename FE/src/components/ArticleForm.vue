@@ -18,8 +18,18 @@ export default {
   data() {
     return {
       article: this.existingArticle || { title: '', content: '', category: '', status: 'draft' },
-      categories: ['Tech', 'Health', 'Lifestyle'],
+      categories: [
+      'Tech', 'Health', 'Lifestyle', 'Business & Finance', 'Education', 'Entertainment', 
+      'Science', 'Politics & News', 'Sports', 'Food & Culinary', 'DIY & Home Improvement', 
+      'Travel & Adventure', 'Automotive', 'Personal Development', 'Career & Jobs', 
+      'Gaming', 'Cryptocurrency & Blockchain', 'Parenting & Family', 'Pets & Animals', 
+      'Spirituality & Religion'
+      ],
     };
+  },
+  mounted(){
+    if (this.existingArticle !== null && this.existingArticle !== undefined )
+      this.article = this.existingArticle
   },
   methods: {
     async submitForm() {
