@@ -1,17 +1,27 @@
 # 📝 Project Setup Guide
 
+## Clone Code
+```sh
+git clone git@github.com:xphobia404/Article.git
+```
+
 ## 🔥 Backend Setup (Python Flask)
 
 ### 1️⃣ Install Dependencies
+Buka buka terminal baru lalu masuk ke direktori
+```sh
+cd BE
+```
+
+### 2️⃣ Install Dependencies
 Pastikan Anda sudah menginstal **Python 3** dan **pip**. Jika belum, unduh dari [python.org](https://www.python.org/downloads/).
 
 Lalu, instal dependensi dengan:
 ```sh
-cd BE
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Jalankan Backend Server
+### 3️⃣ Jalankan Backend Server
 Jalankan perintah berikut di terminal untuk memulai server Flask:
 ```sh
 python app.py
@@ -25,18 +35,14 @@ Jika berjalan dengan sukses, Anda akan melihat output seperti:
 
 ## 🎨 Frontend Setup (Vue 3 + Vuetify)
 
-### 1️⃣ Install Node.js & Vue CLI
-Pastikan Anda sudah menginstal **Node.js** (minimal versi 14). Jika belum, unduh dari [nodejs.org](https://nodejs.org/).
-Lalu, instal Vue CLI jika belum terpasang:
+### 1️⃣ Open
+Pastikan Anda sudah menginstal **Node.js** (minimal versi 14). Buka buka terminal baru lalu masuk ke direktori
 ```sh
 CD FE
-npm install -g @vue/cli
 ```
 
-### 2️⃣ Clone Repository & Install Dependencies
+### 2️⃣ Install Dependencies
 ```sh
-git clone https://github.com/xphobia404/Article
-cd repository/frontend
 npm install
 ```
 
