@@ -54,9 +54,7 @@ Vue akan berjalan di `http://localhost:5173/` (sesuai dengan konfigurasi Vite).
 ---
 
 ## 🎯 Fitur Utama
-✅ **CRUD Articles** – Tambah, edit, hapus, dan lihat artikel.
-✅ **Pagination** – Menampilkan daftar artikel dengan navigasi halaman.
-✅ **Vuetify UI** – Desain modern menggunakan Vuetify.
-✅ **API Flask** – Backend ringan & cepat menggunakan Flask.
+- ✅ **CRUD Articles** – Tambah, edit, hapus, dan lihat artikel.
+- ✅ **Pagination** – Menampilkan daftar artikel dengan navigasi halaman.
 
 ---
