@@ -8,7 +8,7 @@ git clone git@github.com:xphobia404/Article.git
 ## 🔥 Backend Setup (Python Flask)
 
 ### 1️⃣ Install Dependencies
-Buka buka terminal baru lalu masuk ke direktori
+Buka terminal baru lalu masuk ke direktori
 ```sh
 cd BE
 ```
@@ -36,7 +36,7 @@ Jika berjalan dengan sukses, Anda akan melihat output seperti:
 ## 🎨 Frontend Setup (Vue 3 + Vuetify)
 
 ### 1️⃣ Open
-Pastikan Anda sudah menginstal **Node.js** (minimal versi 14). Buka buka terminal baru lalu masuk ke direktori
+Pastikan Anda sudah menginstal **Node.js** (minimal versi 14). Buka terminal baru lalu masuk ke direktori
 ```sh
 CD FE
 ```
