@@ -5,9 +5,9 @@
       <v-tab value="drafts">Drafts</v-tab>
       <v-tab value="trashed">Trashed</v-tab>
     </v-tabs>
-    
+
     <v-data-table :headers="headers" :items="filteredArticles">
-      <template v-slot:item.actions="{ item }">
+      <template #item.actions="{ item }">
         <v-icon @click="editArticle(item)">mdi-pencil</v-icon>
         <v-icon @click="moveToTrash(item)">mdi-trash-can</v-icon>
       </template>
@@ -24,9 +24,9 @@ export default {
       selectedTab: 'published',
       articles: [],
       headers: [
-        { text: 'Title', value: 'title' },
-        { text: 'Category', value: 'category' },
-        { text: 'Actions', value: 'actions', sortable: false }
+        { title: 'Title', value: 'title' },
+        { title: 'Category', value: 'category' },
+        { title: 'Actions', value: 'actions', sortable: false }
       ]
     };
   },
