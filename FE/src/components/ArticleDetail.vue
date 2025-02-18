@@ -7,7 +7,7 @@
         <p>{{ article.content }}</p>
       </v-card-text>
       <v-card-actions>
-        <v-btn @click="$router.push('/')">Back</v-btn>
+        <v-btn @click="$router.push('/article/preview')">Back</v-btn>
       </v-card-actions>
     </v-card>
     <v-alert v-else type="error">Article not found</v-alert>

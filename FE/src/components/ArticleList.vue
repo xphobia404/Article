@@ -1,9 +1,12 @@
 <template>
   <v-container>
+    <v-btn color="primary" class="mb-4 mr-2" @click="$router.push('/article/new')">Add Article</v-btn>
+    <v-btn color="secondary" class="mb-4" @click="$router.push('/article/preview')">preview</v-btn>
+
     <v-tabs v-model="selectedTab">
-      <v-tab value="published">Published</v-tab>
-      <v-tab value="drafts">Drafts</v-tab>
-      <v-tab value="trashed">Trashed</v-tab>
+      <v-tab value="publish">Published</v-tab>
+      <v-tab value="draft">Drafts</v-tab>
+      <v-tab value="trash">Trashed</v-tab>
     </v-tabs>
 
     <v-data-table :headers="headers" :items="filteredArticles">
@@ -33,7 +36,7 @@ export default {
   components: { ArticleForm },
   data() {
     return {
-      selectedTab: 'published',
+      selectedTab: 'publish',
       articles: [],
       dialog: false,
       selectedArticle: null,
@@ -62,7 +65,7 @@ export default {
       this.fetchArticles();
     },
     async moveToTrash(article) {
-      article.status = 'trashed';
+      article.status = 'trash';
       await updateArticle(article);
       this.fetchArticles();
     }

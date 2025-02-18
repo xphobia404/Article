@@ -33,8 +33,8 @@ def submit():
             return jsonify({"error": "Content must be at least 200 characters"}), 400
         if len(payload["category"]) < 3:
             return jsonify({"error": "Category must be at least 3 characters"}), 400
-        if payload["status"] not in ["publish", "draft", "thrash"]:
-            return jsonify({"error": "Status must be either 'publish', 'draft', or 'thrash'"}), 400
+        if payload["status"] not in ["publish", "draft", "trash"]:
+            return jsonify({"error": "Status must be either 'publish', 'draft', or 'trash'"}), 400
         
         new_entry = Posts(
             title=payload["title"],
@@ -102,8 +102,8 @@ def update_article():
             return jsonify({"error": "Content must be at least 200 characters"}), 400
         if "category" in payload and len(payload["category"]) < 3:
             return jsonify({"error": "Category must be at least 3 characters"}), 400
-        if "status" in payload and payload["status"] not in ["publish", "draft", "thrash"]:
-            return jsonify({"error": "Status must be either 'publish', 'draft', or 'thrash'"}), 400
+        if "status" in payload and payload["status"] not in ["publish", "draft", "trash"]:
+            return jsonify({"error": "Status must be either 'publish', 'draft', or 'trash'"}), 400
         
         article.title = payload.get("title", article.title)
         article.content = payload.get("content", article.content)
