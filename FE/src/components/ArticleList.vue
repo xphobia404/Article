@@ -8,21 +8,35 @@
 
     <v-data-table :headers="headers" :items="filteredArticles">
       <template #item.actions="{ item }">
-        <v-icon @click="editArticle(item)">mdi-pencil</v-icon>
-        <v-icon @click="moveToTrash(item)">mdi-trash-can</v-icon>
+        <v-icon @click="openEditDialog(item)" tabindex="0">mdi-pencil</v-icon>
+        <v-icon @click="moveToTrash(item)" tabindex="0">mdi-trash-can</v-icon>
       </template>
     </v-data-table>
+
+    <!-- Dialog untuk edit artikel -->
+    <v-dialog v-model="dialog" max-width="600px">
+      <v-card>
+        <v-card-title>Edit Article</v-card-title>
+        <v-card-text>
+          <ArticleForm :existingArticle="selectedArticle" @article-saved="closeDialog" />
+        </v-card-text>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
 <script>
 import { getArticles, updateArticle } from '@/api';
+import ArticleForm from '@/components/ArticleForm.vue';
 
 export default {
+  components: { ArticleForm },
   data() {
     return {
       selectedTab: 'published',
       articles: [],
+      dialog: false,
+      selectedArticle: null,
       headers: [
         { title: 'Title', value: 'title' },
         { title: 'Category', value: 'category' },
@@ -39,8 +53,13 @@ export default {
     async fetchArticles() {
       this.articles = await getArticles();
     },
-    editArticle(article) {
-      this.$emit('edit-article', article);
+    openEditDialog(article) {
+      this.selectedArticle = { ...article };
+      this.dialog = true;
+    },
+    closeDialog() {
+      this.dialog = false;
+      this.fetchArticles();
     },
     async moveToTrash(article) {
       article.status = 'trashed';

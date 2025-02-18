@@ -4,7 +4,7 @@
       <v-text-field v-model="article.title" label="Title" required></v-text-field>
       <v-textarea v-model="article.content" label="Content" required></v-textarea>
       <v-select v-model="article.category" :items="categories" label="Category" required></v-select>
-      <v-btn color="primary" @click="submitForm">Publish</v-btn>
+      <v-btn class="mr-2" color="primary" @click="submitForm">Publish</v-btn>
       <v-btn color="secondary" @click="saveAsDraft">Draft</v-btn>
     </v-form>
   </v-container>
